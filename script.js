@@ -5,6 +5,9 @@ $(document).ready(function () {
     $("#bookBtn").on("click", function (event) {
         event.preventDefault();
         $("#mainCard").html("<div><input id='bookSearch'> <button id='bookSearchButton' class='button' /></div > ")
+
+
+
     })
 
     $("#mainCard").on("click", "#bookSearchButton", function (event) {
@@ -24,7 +27,15 @@ $(document).ready(function () {
                     <div class="card"> 
                     <h1>${book.volumeInfo.title}</h1>
                     <img src=${book.volumeInfo.imageLinks.smallThumbnail}/>
-                    </div>`)
+                    <button id= 'returnButton'>Return to the Search</button>
+                    </div>
+                    <script>
+                    $('#returnButton').on('click', function(event){
+                        event.preventDefault();
+                         $("#mainCard").html("<div><input id='bookSearch'> <button id='bookSearchButton' class='button' /></div > ")
+                    })
+                    
+                    </script>`)
                 })
 
                 var bookTitle = response.items[0].volumeInfo.title
