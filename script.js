@@ -27,15 +27,14 @@ $(document).ready(function () {
                     <div class="card"> 
                     <h1>${book.volumeInfo.title}</h1>
                     <img src=${book.volumeInfo.imageLinks.smallThumbnail}/>
-                    <button id= 'returnButton'>Return to the Search</button>
                     </div>
-                    <script>
-                    $('#returnButton').on('click', function(event){
-                        event.preventDefault();
-                         $("#mainCard").html("<div><input id='bookSearch'> <button id='bookSearchButton' class='button' /></div > ")
-                    })
-                    
-                    </script>`)
+                    <div class="card">
+                    <button id= 'returnButton'>Return to the Search</button>
+                    </div>`,
+                        $('#returnButton').on('click', function (event) {
+                            event.preventDefault();
+                            $(".card").empty()
+                        }))
                 })
 
                 var bookTitle = response.items[0].volumeInfo.title
