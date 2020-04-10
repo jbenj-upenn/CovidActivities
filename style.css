@@ -5,4 +5,24 @@
     border: solid;
 }
 
+#searchButton2 {
+  
+}
+
+.title {
+    text-align: center;
+}
+
+#logo {
+    align-items: center;
+    margin: 4%;
+    max-width: 55%;
+    
+}
+
+#intro {
+    padding: 15px;
+    margin-top: 45px;
+}
+
 
