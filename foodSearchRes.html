@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covid Activities</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header">
+        <section class="hero is-dark">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Covid Activities
+                    </h1>
+                    <h2 class="subtitle">
+                        Bored at home? Try our suggestions for various home activities
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </section>
+    <br>
+
+    <!-- Food Search Fields -->
+    <div class=" columns">
+
+        <!-- Search by Ingredient -->
+        <div class="column is-one-third">
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Search by Ingredients" id="ingredientSearch">
+                </div>
+                <div class="control">
+                    <a class="button is-info" id="foodSearchBtn">
+                        Search
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search by Cuisine Type -->
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Search by Cuisine Type" id="cuisineTypeSearch">
+                </div>
+                <div class="control">
+                    <a class="button is-info">
+                        Search
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search by Recipe Name -->
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Search by Recipe Name" id="recipeNameSearch">
+                </div>
+                <div class="control">
+                    <a class="button is-info">
+                        Search
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is where the book search results are going to go -->
+        <div id="foodResults" class="column">
+            <!-- Recipe 1 -->
+            <div column is-full>
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img id="img0">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <a id="text0"></a>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            <br>
+            <!-- Recipe 2 -->
+            <div column is-full>
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img id="img1">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <a id="text1"></a>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            <br>
+            <!-- Recipe 3 -->
+            <div column is-full>
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img id="img2">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <a id="text2"></a>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            <br>
+            <!-- Recipe 4 -->
+            <div column is-full>
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img id="img3">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <a id="text3"></a>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            <br>
+            <!-- Recipe 5 -->
+            <div column is-full>
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img id="img4">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <a id="text4"></a>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuerry -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Custom js -->
+    <script src="food_script.js"></script>
+</body>
+
+</html>
