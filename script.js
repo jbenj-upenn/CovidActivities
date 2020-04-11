@@ -8,12 +8,14 @@ $(document).ready(function () {
         $("#mainCard").html(`
         <div class="container">
             <div class="field">
+            <!-- search by title -->
                 <label class="label">Covid Book Titles</label>
                 <div class="control">
                     <input class="input" id= "titleSearch" type="text" placeholder="Search by Title" style="width: 45%">
                     <button class="button is-focused is-black searchButtons" id="searchButton2">Search</button>
                 </div>
             </div>
+            <!-- search by book -->
             <div class="field">
                 <label class="label">Covid Book Authors</label>
                 <div class="control">
@@ -21,6 +23,7 @@ $(document).ready(function () {
                     <button class="button is-focused is-black searchButtons" id="searchButton2">Search</button>
                 </div>
             </div>
+            <!-- search by subject -->
             <div class="field">
                 <label class="label">Covid Book Subjects</label>
                 <div class="control">
