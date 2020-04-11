@@ -183,15 +183,17 @@ $(document).ready(function () {
                             <a class="button is-info searchButton">Search</a>
                         </div>
                     </div>
+                     <div>
+                     <!-- Refresh Page --!>
+                    <a class="button is-info" id= "refreshPage">Refresh Page</a>
+
+                    </div>
                     <!-- Clear Button --!>
                     <div class="control">
                             <a class="button emptyResults is-info ">Clear Search</a>
                         </div>
                     </div>
-                    <div>
-                    <a class="button is-info" id= "refreshPage">Clear Search</a>
-
-                    </div>
+                   
             </div>
         
 
