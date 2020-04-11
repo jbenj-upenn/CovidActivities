@@ -1,8 +1,6 @@
 $(document).ready(function () {
     console.log("ready!");
 
-
-
     $("#bookBtn").on("click", function (event) {
         event.preventDefault();
         $("#mainCard").html(`
@@ -45,12 +43,6 @@ $(document).ready(function () {
             </div>
         </div>`)
 
-
-
-
-
-
-
         $("#mainCard").on("click", ".searchButtons", function (event) {
             event.preventDefault();
             console.log("clicked")
@@ -64,16 +56,13 @@ $(document).ready(function () {
                 // still letting the user search find a way to stop
             }
             else if (titleSearch !== "") {
-                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + titleSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+intitle" + titleSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
             }
             else if (authorSearch !== "") {
-                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+inauthor:" + authorSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+inauthor" + authorSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
             } else if (subjectSearch !== "") {
-                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+subject:" + subjectSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+subject" + subjectSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
                 // code for its own .volumeInfo.title
-            }
-            else if (titleSearch !== "" && authorSearch !== "" && subjectSearch !== "") {
-                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + titleSearch + "+inauthor:" + authorSearch + "+subject:" + subjectSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
             }
             $.ajax({
                 url: queryURL,
@@ -100,7 +89,7 @@ $(document).ready(function () {
                             $(".searchResults").append(`
                     <div class="card"> 
                     <div>
-                    <h1><a href="${book.volumeInfo.previewLink}">${book.volumeInfo.title}</h1>
+                    <h1>${book.volumeInfo.title}</h1>
                     <img src=${book.volumeInfo.imageLinks.smallThumbnail}/>
                     </div>
                     </div>

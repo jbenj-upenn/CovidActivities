@@ -7,5 +7,9 @@
 
 #mainCard {
     margin-top: 50px;
+}
 
+.columns {
+    margin-left: 23px;
+    margin-top: .75rem;
 }
