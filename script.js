@@ -52,6 +52,7 @@ $(document).ready(function () {
 
 
         $("#mainCard").on("click", ".searchButtons", function (event) {
+            $(".searchResults").empty()
             event.preventDefault();
             console.log("clicked")
             var titleSearch = $("#titleSearch").val()
@@ -74,20 +75,36 @@ $(document).ready(function () {
             }
             else if (titleSearch !== "" && authorSearch !== "" && subjectSearch !== "") {
                 queryURL = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + titleSearch + "+inauthor:" + authorSearch + "+subject:" + subjectSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+                console.log()
             }
+            else if (titleSearch !== "" && authorSearch !== "") {
+                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + titleSearch + "+inauthor:" + authorSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+            }
+
+            else if (titleSearch !== "" && subjectSearch !== "") {
+                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+intitle:" + titleSearch + "+subject:" + subjectSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+            }
+            else if (authorSearch !== "" && subjectSearch !== "") {
+                queryURL = "https://www.googleapis.com/books/v1/volumes?q=+inauthor:" + authorSearch + "+subject:" + subjectSearch + "&key=AIzaSyB_qVUwrTtb7vLduMA6jovLXJTJW8UBiIE";
+            }
+
             $.ajax({
                 url: queryURL,
                 method: "GET"
             })
                 .then(function (response) {
+                    $("#titleSearch").empty();
+                    $("#authorSearch").empty();
+                    $("#subjectSearch").empty();
+
                     if (subjectSearch !== "") {
                         console.log(response)
                         response.items.forEach(book => {
                             $(".searchResults").append(`
                     <div class="card"> 
                     <div>
-                    <h1>${bookTitle.volumeInfo.title}</h1>
-                    <img src=${items.volumeInfo.imageLinks.smallThumbnail}/>
+                    <h1><a href="${book.volumeInfo.previewLink}">${book.volumeInfo.title}</h1>
+                    <img src=${book.volumeInfo.imageLinks.smallThumbnail}/>
                     </div>
                     </div>
                     `,)
@@ -165,19 +182,19 @@ $(document).ready(function () {
             </div>
         
 
-        <!-- This is where the book search results are going to go -->
+        <!-- This is where the recipe search results are going to go -->
         <div id="foodResults" class="column">
             <!-- Recipe 1 -->
             <div column is-full>
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img id="img0">
+                            <img class = "resultItem"id="img0">
                         </p>
                     </figure>
                     <div class="media-content">
                         <div class="content">
-                            <a id="text0"></a>
+                            <a class = "resultItem" id="text0"></a>
                         </div>
                         <nav class="level is-mobile">
                             <div class="level-left">
@@ -198,12 +215,12 @@ $(document).ready(function () {
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img id="img1">
+                            <img class = "resultItem" id="img1">
                         </p>
                     </figure>
                     <div class="media-content">
                         <div class="content">
-                            <a id="text1"></a>
+                            <a class = "resultItem" id="text1"></a>
                         </div>
                         <nav class="level is-mobile">
                             <div class="level-left">
@@ -224,12 +241,12 @@ $(document).ready(function () {
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img id="img2">
+                            <img class = "resultItem" id="img2">
                         </p>
                     </figure>
                     <div class="media-content">
                         <div class="content">
-                            <a id="text2"></a>
+                            <a class = "resultItem" id="text2"></a>
                         </div>
                         <nav class="level is-mobile">
                             <div class="level-left">
@@ -250,12 +267,12 @@ $(document).ready(function () {
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img id="img3">
+                            <img class = "resultItem" id="img3">
                         </p>
                     </figure>
                     <div class="media-content">
                         <div class="content">
-                            <a id="text3"></a>
+                            <a class = "resultItem" id="text3"></a>
                         </div>
                         <nav class="level is-mobile">
                             <div class="level-left">
@@ -276,12 +293,12 @@ $(document).ready(function () {
                 <article class="media">
                     <figure class="media-left">
                         <p class="image is-64x64">
-                            <img id="img4">
+                            <img class = "resultItem" id="img4">
                         </p>
                     </figure>
                     <div class="media-content">
                         <div class="content">
-                            <a id="text4"></a>
+                            <a class = "resultItem" id="text4"></a>
                         </div>
                         <nav class="level is-mobile">
                             <div class="level-left">
@@ -306,23 +323,38 @@ $(document).ready(function () {
     $("#mainCard").on("click", ".searchButton", function (event) {
         event.preventDefault();
         console.log("clicked")
+        $(".resultItem").empty()
 
         var recipeSearch = $("#recSearch").val()
         var cuisineSearch = $("#cuiSearch").val()
         var ingredientSearch = $("#ingSearch").val()
+        var queryURL = ""
         console.log(recipeSearch)
 
         if (recipeSearch === "" && cuisineSearch === "" && ingredientSearch === "") {
             $("#foodResults").html("Feilds Cannot be Empty")
         }
         else if (recipeSearch !== "") {
-            var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipeSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipeSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
         }
         else if (cuisineSearch !== "") {
-            var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + cuisineSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + cuisineSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
         }
         else if (ingredientSearch !== "") {
-            var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + ingredientSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + ingredientSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+        }
+        else if (recipeSearch !== "" && cuisineSearch !== "" && ingredientSearch !== "") {
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + ingredientSearch + "" + cuisineSearch + "" + recipeSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+        }
+        else if (recipeSearch && cuisineSearch !== "") {
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipeSearch + cuisineSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+        }
+        else if (recipeSearch !== "" && ingredientSearch !== "") {
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + ingredientSearch + recipeSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+        }
+        else if (ingredientSearch !== "" && cuisineSearch !== "") {
+            queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + ingredientSearch + cuisineSearch + "&app_id=df0c7466&app_key=9d5d7e94beb6606845f7c4cab6f31da7"
+
         }
 
 
@@ -333,6 +365,10 @@ $(document).ready(function () {
 
             .then(function (response) {
                 console.log(response)
+                $("#recSearch").empty();
+                $("#cuiSearch").empty();
+                $("#ingSearch").empty();
+
                 $("#img0").attr("src", response.hits[0].recipe.image);
                 $("#img1").attr("src", response.hits[1].recipe.image);
                 $("#img2").attr("src", response.hits[2].recipe.image);
