@@ -19,52 +19,71 @@
     <section class="header">
         <section class="hero is-dark">
             <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-                        Covid Activities
-                    </h1>
-                    <h2 class="subtitle">
-                        Bored at home? Try our suggestions for various home activities
-                    </h2>
+
+                <div class="columns is-full" id="intro">
+                    <div class="column" id="logo">
+                        <figure class="image is-large">
+                            <img src="assets/covidactivities.4.0.png" alt="Covid Activities Logo">
+                        </figure>
+                    </div>
+                    <div class="column" id="intro">
+                        <div class="form">
+                            <h1 class="title">
+                                Bored at home?
+                                <br>
+                                <h2>Try our suggestions
+                                    for quality stay-at-home activities!
+                                </h2>
+                            </h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
 
     <!-- Buttons -->
-    <div class="columns">
+    <div id="mainCard" class="columns">
 
         <!-- Books button -->
-        <div class="column is-one-third">
+        <div class="column is-half">
             <div class="box">
+                <h1 class="title">Click Below</h1>
                 <figure class="image is-square">
-                    <a href="" id="bookBtn"><img src="assets/books.jpg"></a>
+                    <a href="" id="bookBtn"><img style="position: absolute;" src="assets/books.jpg"></a>
+                    <div style="position:relative " class="card"></div>
                 </figure>
             </div>
         </div>
 
-        <div class="column">
-            <!-- Random site button -->
-            <div class="box">
-                <figure class="image is-square">
-                    <a href="" id="randomBtn"><img src="assets/random.png"></a>
-                </figure>
-            </div>
+        <!-- -------------- -->
+        <!--Commenting the below out for Agile-MVP reasons; in the future, incorporate a random search and a lucky button-->
+        <!-- <div class="column"> -->
+        <!-- Random site button -->
+        <!-- <div class="box"> -->
+        <!-- <figure class="image is-square"> -->
+        <!-- <a href="" id="randomBtn"><img src="assets/random.png"></a> -->
+        <!-- </figure> -->
+        <!-- </div> -->
 
-            <!-- Give me anything button -->
-            <a href="" id="luckyBtn">
-                <div class="box" id="lucky">Give me anything!</div>
-            </a>
-        </div>
-
+        <!-- Give me anything button -->
+        <!-- <a href="" id="luckyBtn"> -->
+        <!-- <div class="box" id="lucky">Give me anything!</div> -->
+        <!-- </a> -->
+        <!-- </div> -->
+        <!-- ---------------- -->
         <!-- Recipes button -->
-        <div class="column">
+
+
+        <div class="column is-half">
             <div class="box">
+                <h1 class="title">Click Below</h1>
                 <figure class="image is-square">
                     <a href="" id="recipeBtn"><img src="assets/recipes.jpg"></a>
                 </figure>
             </div>
         </div>
+
     </div>
 
 

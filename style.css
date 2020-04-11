@@ -5,4 +5,37 @@
     border: solid;
 }
 
+#mainCard {
+    margin-top: 50px;
+}
 
+.columns {
+    margin-left: 23px;
+    margin-top: .75rem;
+}
+
+#foodResults {
+    margin-left: -250px;
+}
+
+.media-left {
+    border-style: solid;
+    border-radius: 8px;
+    
+}
+
+#refreshPage {
+    margin-bottom: 20px;
+}
+
+#ingSearch {
+    margin-bottom: 20px;
+}
+
+#cuiSearch {
+    margin-bottom: 20px;
+}
+
+#recSearch {
+    margin-bottom: 20px;
+}
