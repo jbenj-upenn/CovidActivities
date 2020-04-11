@@ -41,6 +41,10 @@ $(document).ready(function () {
                     <i class="fas fa-book"></i>
                 </div>
             </div>
+            <div>
+            <button id = "refreshPage">Return to Main Page</button>
+
+            </div>
             <div class = "searchResults">
             </div>
         </div>`)
@@ -138,6 +142,9 @@ $(document).ready(function () {
         $("#mainCard").on("click", ".emptyResults", function (event) {
             $(".searchResults").empty()
         })
+        $("mainCard").on("click", "#refreshPage", function (event) {
+            $("mainCard").reload()
+        })
     })
 
 
@@ -180,7 +187,7 @@ $(document).ready(function () {
                     </div>
                     <!-- Clear Button --!>
                     <div class="control">
-                            <a class="button emptyResults is-info ">Search</a>
+                            <a class="button emptyResults is-info ">Clear Search</a>
                         </div>
                 </div>
             </div>
