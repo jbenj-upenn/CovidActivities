@@ -188,12 +188,11 @@ $(document).ready(function () {
                     </div>
                      <div>
                      <!-- Refresh Page --!>
-<<<<<<< HEAD
+
                     <a class="button is-info" id= "refreshPage">Refresh Page</a>
-=======
                     <a class="button is-black" id= "refreshPage">Refresh Page</a>
 
->>>>>>> 18c0e5e0a5d222ec9e131fd1586666bee86f6bdf
+
                     </div>
                     <!-- Clear Button --!>
                     <div class="control">
