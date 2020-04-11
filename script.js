@@ -119,15 +119,15 @@ $(document).ready(function () {
         event.preventDefault();
         $("#mainCard").html(`
          
-            <div class="container columns is-one-third">
-                <div class="column is-one-third">
+            <div class="container columns">
+                <div class="column is-two-thirds">
                     <!-- Search by Ingredient -->
                     <div class="field has-addons">
                         <div class="control">
                             <input class="input" type="text" placeholder="Search by Ingredients" id="ingSearch">
                         </div>
                         <div class="control">
-                            <a class="button is-info searchButton">Search</a>
+                            <a class="button is-dark searchButton">Search</a>
                         </div>
                     </div>
 
@@ -137,7 +137,7 @@ $(document).ready(function () {
                             <input class="input" type="text" placeholder="Search by Cuisine Type" id="cuiSearch">
                         </div>
                         <div class="control">
-                            <a class="button is-info searchButton">Search</a>
+                            <a class="button is-dark searchButton">Search</a>
                         </div>
                     </div>
 
@@ -147,14 +147,14 @@ $(document).ready(function () {
                             <input class="input" type="text" placeholder="Search by Recipe Name" id="recSearch">
                         </div>
                         <div class="control">
-                            <a class="button is-info searchButton">Search</a>
+                            <a class="button is-dark searchButton">Search</a>
                         </div>
                     </div>
                 </div>
             </div>
         
-
-        <!-- This is where the book search results are going to go -->
+        
+       
         <div id="foodResults" class="column">
             <!-- Recipe 1 -->
             <div column is-full>

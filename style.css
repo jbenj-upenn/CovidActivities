@@ -13,3 +13,13 @@
     margin-left: 23px;
     margin-top: .75rem;
 }
+
+#foodResults {
+    margin-left: -250px;
+}
+
+.media-left {
+    border-style: solid;
+    border-radius: 8px;
+    
+}
