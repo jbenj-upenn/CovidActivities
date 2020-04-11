@@ -41,10 +41,8 @@ $(document).ready(function () {
                     <i class="fas fa-book"></i>
                 </div>
             </div>
+             <button class="button is-focused is-black emptyResults" id="refreshPage">Return to Main Page</button>
             <div>
-            <button id = "refreshPage">Return to Main Page</button>
-
-            </div>
             <div class = "searchResults">
             </div>
         </div>`)
@@ -143,7 +141,7 @@ $(document).ready(function () {
             $(".searchResults").empty()
         })
         $("mainCard").on("click", "#refreshPage", function (event) {
-            $("mainCard").reload()
+            window.location.reload()
         })
     })
 
@@ -189,7 +187,11 @@ $(document).ready(function () {
                     <div class="control">
                             <a class="button emptyResults is-info ">Clear Search</a>
                         </div>
-                </div>
+                    </div>
+                    <div>
+                    <a class="button is-info" id= "refreshPage">Clear Search</a>
+
+                    </div>
             </div>
         
 
@@ -392,6 +394,9 @@ $(document).ready(function () {
             })
         $("#mainCard").on("click", ".emptyResults", function (event) {
             $(".searchResults").empty()
+        })
+        $("mainCard").on("click", "#refreshPage", function (event) {
+            window.location.reload()
         })
 
 
