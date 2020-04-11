@@ -32,14 +32,15 @@ $(document).ready(function () {
                 </div>
             </div>
             <div class="field">
-                <div class="control">
-                    <i class="fas fa-book"></i>
-                    <button class="button is-focused is-black emptyResults" id="searchButton2">Clear Results</button>
-                    <i class="fas fa-book"></i>
-                </div>
             </div>
              <button class="button is-focused is-black" id="refreshPage">Return to Main Page</button>
             <div>
+                <div class="control">
+                    
+                    <button class="button is-focused is-black emptyResults" id="searchButton2">Clear Results</button>
+                   
+                </div>
+
             <div class = "searchResults">
             </div>
         </div>`)
@@ -102,6 +103,7 @@ $(document).ready(function () {
                             $(".searchResults").append(`
                     <div class="card"> 
                     <div>
+                    <i class="fas fa-book"></i>
                     <h1>${book.volumeInfo.title}</h1>
                     <img src=${book.volumeInfo.imageLinks.smallThumbnail}/>
                     </div>
@@ -188,12 +190,7 @@ $(document).ready(function () {
                     </div>
                      <div>
                      <!-- Refresh Page --!>
-<<<<<<< HEAD
-                    <a class="button is-info" id= "refreshPage">Refresh Page</a>
-=======
-                    <a class="button is-black" id= "refreshPage">Refresh Page</a>
-
->>>>>>> 18c0e5e0a5d222ec9e131fd1586666bee86f6bdf
+                    <button class="button is-focused is-black" id="refreshPage">Return to Main Page</button>
                     </div>
                     <!-- Clear Button --!>
                     <div class="control">
@@ -404,7 +401,8 @@ $(document).ready(function () {
         $("#mainCard").on("click", ".emptyResults", function (event) {
             $(".searchResults").empty()
         })
-        $("mainCard").on("click", "#refreshPage", function (event) {
+        $("#mainCard").on("click", "#refreshPage", function (event) {
+            console.log("hey")
             window.location.reload()
         })
 
