@@ -1,7 +1,47 @@
-Our program will be a website that allows users to find random activities to do while sitting home, bored, during the covid crisis. The main focus will be on food to cook, and books to read. 
+# Covid Activities
+Web application that allows users to find random activities to do while sitting home, bored, during the covid crisis. The main focus will be on food to cook, and books to read. 
 
-The first page will have 3 buttons, “Recipes,” “books,” and “random” which will pull from a recipe API, a book api, and a Pinterest, respectively. 
+Initial version includes search engines for books and recipes. Users can search using various parameters to find the desired results.
 
-Once the user clicks recipes, they will be brought to a new div that will ask for what kind of food they would like. There will be a input box for what type of food they would like to eat, and a random button as well. The random button will pull up a random recipe. If the user searches based off of their chosen cuisine type, they will be brought to a new page where a list of 5 recipes will be presented. 
+Future implementations will include other search fields (random websotes, search video games etc.) as well as aditional functions (save favorites).
 
-Once the user clicks books, they will be brought to a new div that will ask for what kind of food they would like. There will be a input box for what type of food they would like to eat, and a random button as well. The random button will pull up a random recipe. If the user searches based off of their chosen cuisine type, they will be brought to a new page where a list of 5 recipes will be presented. 
+### Installing
+
+- Run index.html on your favorite browser.
+- Be sure to keep all files in the same directory.
+
+Here is a sample of the app:
+![]()
+
+**You can also access the app by clicking [here](https://jbenj-upenn.github.io/CovidActivities/).**
+
+## Built With
+
+* [Visual Studio Code](https://code.visualstudio.com/) - For standard coding.
+* [jQuery](https://jquery.com/) - Javascript library.
+* [Bulma](https://bulma.io/) - CSS framework.
+* [Pixlr](https://pixlr.com/) - Used to edit the images and screenshots used.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/dmjohnspor/Sporidis-Foster_Portfolio/commits/master). 
+
+## Authors
+
+* **Josua Benjamin** - *Project contributor* - [JoshBenj](https://github.com/jbenj-upenn)*
+* **Erik Donovan** - *Project Contributor* - [ErikDono](https://github.com/ErikDono)*
+* **Ioannis Sporidis-Foster** - *Project Contributor* - [dmjohnspor](https://github.com/dmjohnspor)*
+* **Anthony Briglia** - *Instruction, guidance and corrections*
+* **Artan Muzhaqi** - *Guidance and corrections*
+* **Tom Woods** - *Guidance and corrections*
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used.
+* A big thank you to Anthony, Tani and Tom for all their support and guidance.
+* To all our fellow classmates in the bootcamp. Thank you for your continuing help and support!
+* Stay healthy and safe!
