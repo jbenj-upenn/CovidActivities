@@ -160,7 +160,7 @@ $(document).ready(function () {
                             <input class="input" type="text" placeholder="Search by Ingredients" id="ingSearch">
                         </div>
                         <div class="control">
-                            <a class="button is-info searchButton">Search</a>
+                            <a class="button is-black searchButton">Search</a>
                         </div>
                     </div>
 
@@ -170,7 +170,7 @@ $(document).ready(function () {
                             <input class="input" type="text" placeholder="Search by Cuisine Type" id="cuiSearch">
                         </div>
                         <div class="control">
-                            <a class="button is-info searchButton">Search</a>
+                            <a class="button is-black searchButton">Search</a>
                         </div>
                     </div>
 
@@ -180,16 +180,21 @@ $(document).ready(function () {
                             <input class="input" type="text" placeholder="Search by Recipe Name" id="recSearch">
                         </div>
                         <div class="control">
-                            <a class="button is-info searchButton">Search</a>
+                            <a class="button is-black searchButton">Search</a>
                         </div>
                     </div>
                      <div>
                      <!-- Refresh Page --!>
+<<<<<<< HEAD
                     <a class="button is-info" id= "refreshPage">Refresh Page</a>
+=======
+                    <a class="button is-black" id= "refreshPage">Refresh Page</a>
+
+>>>>>>> 18c0e5e0a5d222ec9e131fd1586666bee86f6bdf
                     </div>
                     <!-- Clear Button --!>
                     <div class="control">
-                            <a class="button emptyResults is-info ">Clear Search</a>
+                            <a class="button emptyResults is-black ">Clear Search</a>
                         </div>
                     </div>
                    
