@@ -10,28 +10,22 @@ $(document).ready(function () {
             <div class="field">
                 <label class="label">Covid Book Titles</label>
                 <div class="control">
-                    <i class="fas fa-book"></i>
                     <input class="input" id= "titleSearch" type="text" placeholder="Search by Title" style="width: 45%">
                     <button class="button is-focused is-black searchButtons" id="searchButton2">Search</button>
-                    <i class="fas fa-book"></i>
                 </div>
             </div>
             <div class="field">
                 <label class="label">Covid Book Authors</label>
                 <div class="control">
-                    <i class="fas fa-book"></i>
                     <input class="input" id = "authorSearch" type="text" placeholder="Search by Author" style="width: 45%">
                     <button class="button is-focused is-black searchButtons" id="searchButton2">Search</button>
-                    <i class="fas fa-book"></i>
                 </div>
             </div>
             <div class="field">
                 <label class="label">Covid Book Subjects</label>
                 <div class="control">
-                    <i class="fas fa-book"></i>
                     <input class="input" id= "subjectSearch" type="text" placeholder="Search by Subject" style="width: 45%">
                     <button class="button is-focused is-black searchButtons" id="searchButton2">Search</button>
-                    <i class="fas fa-book"></i>
                 </div>
             </div>
             <div class="field">
@@ -41,7 +35,7 @@ $(document).ready(function () {
                     <i class="fas fa-book"></i>
                 </div>
             </div>
-             <button class="button is-focused is-black emptyResults" id="refreshPage">Return to Main Page</button>
+             <button class="button is-focused is-black" id="refreshPage">Return to Main Page</button>
             <div>
             <div class = "searchResults">
             </div>
@@ -111,7 +105,7 @@ $(document).ready(function () {
                     </div>
                     `,)
                         })
-                        // this doesnt work still... 
+
                     }
                     else {
                         console.log(response)
@@ -119,6 +113,7 @@ $(document).ready(function () {
                             $(".searchResults").append(`
                     <div class="card"> 
                     <div>
+                     <i class="fas fa-book"></i>
                     <h1><a href="${book.volumeInfo.previewLink}">${book.volumeInfo.title}</h1>
                     <img src=${book.volumeInfo.imageLinks.smallThumbnail}/>
                     </div>
@@ -127,11 +122,15 @@ $(document).ready(function () {
                         })
                         // this works!
                     }
+                    // setting favorites 
+                    $(".searchResults").on("click")
 
-                    var bookTitle = response.items[0].volumeInfo.title
+                    localStorage.setItem(JSON.stringify(response.items[0]))
 
 
-                    console.log(bookTitle)
+
+
+
 
                 })
 
@@ -140,7 +139,8 @@ $(document).ready(function () {
         $("#mainCard").on("click", ".emptyResults", function (event) {
             $(".searchResults").empty()
         })
-        $("mainCard").on("click", "#refreshPage", function (event) {
+        $("#mainCard").on("click", "#refreshPage", function (event) {
+            console.log("hey")
             window.location.reload()
         })
     })
@@ -186,7 +186,6 @@ $(document).ready(function () {
                      <div>
                      <!-- Refresh Page --!>
                     <a class="button is-info" id= "refreshPage">Refresh Page</a>
-
                     </div>
                     <!-- Clear Button --!>
                     <div class="control">
