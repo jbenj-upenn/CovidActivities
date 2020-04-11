@@ -190,15 +190,7 @@ $(document).ready(function () {
                     </div>
                      <div>
                      <!-- Refresh Page --!>
-<<<<<<< HEAD
                     <button class="button is-focused is-black" id="refreshPage">Return to Main Page</button>
-=======
-
-                    <a class="button is-info" id= "refreshPage">Refresh Page</a>
-                    <a class="button is-black" id= "refreshPage">Refresh Page</a>
-
-
->>>>>>> 6c4ceda720585a32db39d743999dfaa93559855c
                     </div>
                     <!-- Clear Button --!>
                     <div class="control">
