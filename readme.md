@@ -4,4 +4,6 @@ The first page will have 3 buttons, “Recipes,” “books,” and “random”
 
 Once the user clicks recipes, they will be brought to a new div that will ask for what kind of food they would like. There will be a input box for what type of food they would like to eat, and a random button as well. The random button will pull up a random recipe. If the user searches based off of their chosen cuisine type, they will be brought to a new page where a list of 5 recipes will be presented. 
 
+![screenshot of the mainpage] (assets/project_1.screenshot.png) 
+
 Once the user clicks books, they will be brought to a new div that will ask for what kind of food they would like. There will be a input box for what type of food they would like to eat, and a random button as well. The random button will pull up a random recipe. If the user searches based off of their chosen cuisine type, they will be brought to a new page where a list of 5 recipes will be presented. 
