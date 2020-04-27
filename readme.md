@@ -45,3 +45,14 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * A big thank you to Anthony, Tani and Tom for all their support and guidance.
 * To all our fellow classmates in the bootcamp. Thank you for your continuing help and support!
 * Stay healthy and safe!
+
+## Screenshots
+
+### Main Page
+![project_1 screenshot](https://user-images.githubusercontent.com/59940368/80397307-ec9c9700-8883-11ea-96e0-9cdf2550da93.png)
+
+### Book Search Page
+![bookSearchExample](https://user-images.githubusercontent.com/59940368/80397275-e27a9880-8883-11ea-9780-42c22aeb693c.png)
+
+### Book Search Results
+![bookSearchExample2](https://user-images.githubusercontent.com/59940368/80397274-e27a9880-8883-11ea-9049-4b5bb0faf63e.png)
